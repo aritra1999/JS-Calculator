@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Claculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="cal.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+ 
+</head>
+<body>
+ <form name="calc" align="center">
+    <div class="top">
+        <div class="scr">
+          <input type="text" size="44" id="screen" name="screen" class="screen" placeholder="0" readonly>
+        </div>
+        <div class="buttona">
+          
+          <input type="button" class="buttona1" id="gen" value="<" onclick="calc.screen.value=calc.screen.value.slice(0,((calc.screen.value.length)-1));cresize();resize();">
+          <input type="button" class="buttona1" id="gen" value="AC" onclick="calc.screen.value='';restore()">
+          <input type="button" class="buttona2" value="=" id="equal" onclick="calc.screen.value=calculate(calc.screen.value);cresize();resize();getans()">
+
+        </div>
+    </div>
+    <div class="buttonb">
+        <div class="spbutton">
+            <div>
+                <input type="button" id="deg" class="button3s"  value="Degrees" onclick="deg1()">
+                <input type="button" id="rad" class="button3s"  value="Radians" onclick="rad1()"> 
+                <input type="button" class="button2" id="gen" value="   1/x  " onclick="calc.screen.value=(1/(calc.screen.value));getans();resize();cresize();">
+                <input type="button" class="button2" id="gen" value="    Pi    " onclick="calc.screen.value+=Math.PI;resize();cresize()">
+                <input type="button" class="button0" id="gen" value="     0     " onclick="calc.screen.value+='0';resize();cresize()">
+                <input type="button" id="gen" class="button2" value="   ln   " onclick="calc.screen.value=Math.log(calc.screen.value);resize();cresize();getans()">
+                <input type="button" class="buttond" id="gen" value="      .     " onclick="calc.screen.value+='.';cresize();resize()">
+                <input type="button" class="buttonopp" id="gen" value="    /     " onclick="calc.screen.value+='/';resize();cresize()">
+
+            </div>  
+            <div>
+                <input type="button" id="trig1" class="buttontrig" value="   sin    " onclick="calc.screen.value=sin1(calc.screen.value);resize();cresize();getans()">
+                <input type="button" id="trig2" class="buttontrig" value="   cos   " onclick="calc.screen.value=cos1(calc.screen.value);cresize();resize();getans()">
+                <input type="button" id="trig3" class="buttontrig" value="   tan    " onclick="calc.screen.value=tan1(calc.screen.value);cresize();resize();getans()">
+                <input type="button" id="prog" class="prog" value=" Binary   " onclick="calc.screen.value=bin(calc.screen.value);resize();cresize()">
+                <input type="button" id="prog" class="prog" value="   Hexa   " onclick="calc.screen.value=hex(calc.screen.value);resize();cresize()">
+                <input type="button" id="gen" class="button2" value="   log  " onclick="calc.screen.value=Math.log(calc.screen.value)/Math.LN10;resize();cresize();getans()">
+                <input type="button" class="buttond" id="gen" value="      (     " onclick="calc.screen.value+='(';resize();cresize()">
+                <input type="button" class="buttonopp" id="gen" value="     X     " onclick="calc.screen.value+='*';cresize()">
+
+            </div>
+            <div>
+                <input type="button" id="trigh1" class="buttontrig" value="  sinh   " onclick="calc.screen.value=sinh1(calc.screen.value);resize();cresize();getans()">
+                <input type="button" id="trigh2" class="buttontrig" value="  cosh " onclick="calc.screen.value=cosh1(calc.screen.value);resize();cresize();getans()">
+                <input type="button" id="trigh3" class="buttontrig" value=" tanh  " onclick="calc.screen.value=tanh1(calc.screen.value);resize();cresize();getans()">
+                <input type="button" id="prog" class="prog" value="   Octa   " onclick="calc.screen.value=oct(calc.screen.value);resize();cresize()">
+                <input type="button" id="prog" class="prog" value=" Dec" onclick="calc.screen.value=dec(calc.screen.value);resize();cresize()">
+                <input type="button" id="prog" class="buttonj" value="   nCr   " onclick="calc.screen.value+='C';resize();cresize();getans()"></td>
+                <input type="button" class="buttond" id="gen" value="      )     " onclick="calc.screen.value+=')';resize();cresize()">
+                <input type="button" class="buttonopp" id="gen" value="     -     " onclick="calc.screen.value+='-';resize()">
+            </div>
+            <div>
+                <input type="button" class="button2" id="gen" value="    ^ 2    " onclick="calc.screen.value=Math.pow(calc.screen.value,2);cresize();resize();getans()">
+                <input type="button" class="button2" id="gen" value="    ^ x    " onclick="calc.screen.value+='^';cresize();resize();getans()">
+                <input type="button" class="button2" id="gen" value="   sqrt ( )   " onclick="calc.screen.value=Math.pow(calc.screen.value,0.5);cresize();resize();getans()">
+                <input type="button" class="button2" id="gen" value="    +/-   " onclick="calc.screen.value=eval((calc.screen.value)*(-1));cresize();resize();getans()">
+                <input type="button" class="button2" id="gen" value="   e^x   " onclick="calc.screen.value=Math.exp(calc.screen.value);resize();cresize();getans()">
+                <input type="button" class="buttonj" id="prog" value="   nPr   " onclick="calc.screen.value+='P';resize();cresize();getans()">
+                <input type="button" class="buttond" id="gen" value="      !     " onclick="cresize();calc.screen.value=factorial(calc.screen.value);resize();getans()">
+                <input type="button" class="buttonopp" id="gen" value="     +     " onclick="calc.screen.value+='+';resize();cresize()">
+            </div>
+          </div>
+          <div class="numpad">
+            <div>
+                <input type="button" class="button1" id="gen" value="     7     " onclick="calc.screen.value+='7';resize()">
+                <input type="button" class="button1" id="gen" value="     8     " onclick="calc.screen.value+='8';resize();">
+                <input type="button" class="button1" id="gen" value="     9     " onclick="calc.screen.value+='9';resize()">                
+            </div>
+            <div>
+                <input type="button" class="button1" id="gen" value="     4     " onclick="calc.screen.value+='4';resize()">
+                <input type="button" class="button1" id="gen" value="     5     " onclick="calc.screen.value+='5';resize()">
+                <input type="button" class="button1" id="gen" value="     6     " onclick="calc.screen.value+='6';resize();getans()">
+            </div>
+            <div>
+                <input type="button" class="button1" id="gen" value="     1     " onclick="calc.screen.value+='1';resize()">
+                <input type="button" class="button1" id="gen" value="     2     " onclick="calc.screen.value+='2';resize()">
+                <input type="button" class="button1" id="gen" value="     3     " onclick="calc.screen.value+='3';resize()">
+            </div>
+          </div>
+    </div>
+  </form>
+
+  <br><br>
+  <div class="buttona22">
+    <a href="Convertor"><input type="button" class="buttona23" value="Convertor" readonly></a>
+    <a href="Graph"><input type="button" class="buttona24" value="Graph" readonly></a>
+  </div>
+</body>
+</html>

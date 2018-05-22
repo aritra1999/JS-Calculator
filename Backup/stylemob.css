@@ -1,0 +1,203 @@
+.body
+{
+    border: 1px soild black;
+     background-color : white ;
+    padding: 10px;
+    background-color :#182647;
+}
+table,tr,
+{
+    border: 1px solid black;
+    min-width: 100%;
+    min-height: 100%;
+}
+.screen
+{
+    width: 315px;
+    height: 75px;
+    font-size : 30px ;
+    background-color:#0a101d ;
+    color: white;
+    text-align: right;
+    padding:5px;
+  border:none;
+}
+.button
+{
+    height: 50px;
+    width: 62px;
+    font-size: 15px;
+    font-weight : bold ;
+    background-color: Coral;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+}
+body{
+    background-color: #182647;
+   padding:0px auto;
+   margin: 0px auto;
+}
+.button4
+{
+    height: 50px;
+    width: 62px;
+    font-size: 15px;
+    font-weight : bold ;
+    background-color: Coral;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+}
+.button0
+{
+    height: 50px;
+    width: 62px;
+    font-size: 16px;
+    font-weight : bold ;
+    padding: 4px;
+    background-color: #191319;
+    color:#00ffba;
+    border: none;
+    border-radius: 5px;
+}
+.button0style
+{
+    height: 53px;
+    width: 62px;
+    font-size: 16px;
+    font-weight : bold ;
+    padding: 4px;
+    background-color: #191319;
+    color:#00ffba;
+    border-radius: 5px;
+}
+.button3
+{
+    height: 50px;
+    width: 62px;
+    font-size: 16px;
+    font-weight : bold ;
+    background-color: #3d4351;
+    color:white;
+    border-radius: 5px;
+    padding: 4px;
+    border: none;
+}
+.button2
+{
+    height: 50px;
+    width: 62px;
+    font-size: 15px;
+    font-weight : bold ;
+    background-color:#ffbb2b;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+}
+.button1
+{
+    height: 50px;
+    width: 62px;
+    font-size: 17px;
+    font-weight : bold ;
+    color: #191319;
+    background-color:#00ffba;
+    padding: 4px;
+    border-radius: 5px;
+    border:none;
+}
+.button3s
+{
+    height: 50px;
+    width: 62px;
+    font-size: 12px;
+    font-weight : bold ;
+      background-color: #191319;
+    color:#00ffba;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+}
+.buttonbig
+{
+    height: 50px;
+    width: 62px;
+    font-size: 13px;
+    font-weight : bold ;
+    background-color:#e0d09d;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+}
+.buttoni
+{
+    background-color:#3c6663;
+    padding: 4px;
+    font-size: 13px;
+    height : 44px  ;
+    width : 61px ;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+.buttonj
+{
+    background-color: #4682B4;
+    font-size: 13px;
+    height : 50px  ;
+    width : 62px ;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+.buttonj1
+{
+    background-color:#3c6663;
+    font-size: 13px;
+    height : 44px  ;
+    width : 100% ;
+    padding: 4px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+.buttonx
+{
+    height: 37px;
+    width : 45px;
+    font-size: 8px;
+    padding: 4px;
+border: none;
+border-radius: 5px;
+}
+.buttonx1
+{
+    height: 37px;
+    width : 68px;
+    font-size: 8px;
+    padding: 4px;
+}
+.prog
+{
+    height: 52px;
+    width: 62px;
+    font-size: 15px;
+    font-weight : bold;
+    border: none;
+    border-radius: 5px;
+}
+.buttonstyle{
+    background-color: #331456;
+     font-size: 13px;
+    height : 50px  ;
+    width : 62px ;
+    color:white;
+    border-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+ }
+ .last{
+    display: grid;
+     grid-template-columns:62px 100px;
+ }
