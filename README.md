@@ -4,4 +4,4 @@ For a  demo <a href="http://aritramondal.cf/code/file/cal/" target="_blank"> Cli
 <a href="http://aritramondal.cf/code/file/cal/" target="_blank"> 
 <img src="demo.png" alt="Screen Shot">
 </a>
-### Hope you like it!
+ Hope you like it!
